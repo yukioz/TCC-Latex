@@ -1,16 +1,14 @@
 \chapter[Resultados Obtidos]{Resultados Obtidos}
-\addcontentsline{toc}{chapter}{Resultados Obtidos}
-\markboth{Resultados Obtidos}{Resultados Obtidos}
 
-Neste primeiro estágio, foram realizadas pesquisas e definições fundamentais para a estruturação do jogo. A análise de engines, frameworks de gamificação e metodologias de design proporcionou uma base sólida para o desenvolvimento. Além disso, foram definidos os principais requisitos, mecânicas e elementos de jogabilidade. O fluxo de telas e a organização do desenvolvimento também foram planejados, garantindo um direcionamento claro do jogo.
+Neste primeiro estágio, foram realizadas pesquisas e definições fundamentais para a estruturação do jogo. A análise de Engines, frameworks de gamificação e metodologias de design proporcionou uma base sólida para o desenvolvimento. Além disso, foram definidos os principais requisitos, mecânicas e elementos de jogabilidade. O fluxo de telas e a organização do desenvolvimento também foram planejados, garantindo um direcionamento claro do jogo.
 
 \section{Pesquisa e definição do tema}
 
-Neste primeiro estágio do trabalho, foi possível estabelecer uma base sólida para o desenvolvimento do jogo. Foram definidos os objetivos do projeto, a engine de desenvolvimento, as mecânicas e regras do jogo, além de uma estrutura metodológica baseada em engenharia de software, Scrum e MDA. A documentação elaborada até o momento servirá como um guia para a implementação no TCC 2, garantindo que o desenvolvimento siga um planejamento estruturado e eficiente.
+Neste primeiro estágio do trabalho, foi possível estabelecer uma base sólida para o desenvolvimento do jogo. Foram definidos os objetivos do projeto, a Engine de desenvolvimento, as mecânicas e regras do jogo, além de uma estrutura metodológica baseada em engenharia de software, Scrum e MDA. A documentação elaborada até o momento servirá como um guia para a implementação no TCC 2, garantindo que o desenvolvimento siga um planejamento estruturado e eficiente.
 
-Durante o TCC 1, foram realizadas diversas etapas essenciais para a estruturação do projeto e o planejamento do desenvolvimento do jogo. A primeira fase consistiu em uma pesquisa aprofundada sobre engines de desenvolvimento, avaliando opções como Unity, Unreal Engine e Godot. Testei algumas dessas engines para entender suas capacidades, limitações e adequação ao escopo do projeto. Apesar de não me aprofundar inicialmente em uma, optei por escolher a Godot pela necessidade de um ambiente acessível, eficiente para jogos 2D e alinhado com os princípios de código aberto, garantindo maior flexibilidade e sem custos adicionais.
+Durante o TCC 1, foram realizadas diversas etapas essenciais para a estruturação do projeto e o planejamento do desenvolvimento do jogo. A primeira fase consistiu em uma pesquisa aprofundada sobre Engines de desenvolvimento, avaliando opções como Unity, Unreal Engine e Godot. Testei algumas dessas Engines para entender suas capacidades, limitações e adequação ao escopo do projeto. Apesar de não me aprofundar inicialmente em uma, optei por escolher a Godot pela necessidade de um ambiente acessível, eficiente para jogos 2D e alinhado com os princípios de código aberto, garantindo maior flexibilidade e sem custos adicionais.
 
-Além da escolha da engine, explorei frameworks de gamificação para compreender como os elementos de design poderiam ser utilizados para engajar os jogadores. O framework Octalysis, criado por Yu-kai Chou, foi um dos principais referenciais para estruturar os aspectos motivacionais do jogo. A pesquisa ajudou a definir quais motivações e mecânicas seriam mais relevantes para criar uma experiência dinâmica e envolvente.
+Além da escolha da Engine, explorei frameworks de gamificação para compreender como os elementos de design poderiam ser utilizados para engajar os jogadores. O framework Octalysis, criado por Yu-kai Chou, foi um dos principais referenciais para estruturar os aspectos motivacionais do jogo. A pesquisa ajudou a definir quais motivações e mecânicas seriam mais relevantes para criar uma experiência dinâmica e envolvente.
 
 Outro conceito fundamental descoberto durante a leitura de artigos foi o framework MDA (Mecânica, Dinâmica e Estética), que se mostrou essencial para estruturar o design do jogo. Esse modelo permitiu uma abordagem mais sistemática na construção da jogabilidade, separando os elementos do jogo em três níveis distintos: as \textbf{mecânicas}, que englobam as regras e interações básicas; as \textbf{dinâmicas}, que emergem dessas regras e moldam o comportamento do jogador; e a \textbf{estética}, que representa as sensações e emoções desejadas.
 
@@ -18,15 +16,15 @@ A aplicação do MDA no planejamento do jogo ajudou a antecipar como determinada
 
 \section{Desenvolvimento do jogo}
 
-Neste capítulo falaremos sobre as etapas de desenvolvimento do jogo, apresentando o fluxo de telas, desde o menu inicial até a tela de fim da partida. Descreveremos nosso primeiro contato com a engine Godot, os principais desafios de criação de \textit{Scenes} e \textit{Nodes}, e como organizamos o trabalho. Vamos destacar os pontos críticos de implementação (movimentação, colisão, sistema de poderes e pontuação) e as soluções adotadas, ilustrando cada fase com trechos de código e capturas de tela.
+Neste capítulo falaremos sobre as etapas de desenvolvimento do jogo, apresentando o fluxo de telas, desde o menu inicial até a tela de fim da partida. Descreveremos nosso primeiro contato com a Engine Godot, os principais desafios de criação de \textit{Scenes} e \textit{Nodes}, e como organizamos o trabalho. Vamos destacar os pontos críticos de implementação (movimentação, colisão, sistema de poderes e pontuação) e as soluções adotadas, ilustrando cada fase com trechos de código e capturas de tela.
 
 \subsection{Preparação do ambiente e planejamento do desenvolvimento}
 
-A configuração inicial do ambiente de desenvolvimento começou com a instalação da engine Godot 4.4 por meio da plataforma Steam, que facilitou o processo de download e atualização. Em seguida, foi criado um repositório no GitHub, clonado localmente para permitir o início imediato do projeto na raiz do versionamento.
+A configuração inicial do ambiente de desenvolvimento começou com a instalação da Engine Godot 4.4 por meio da plataforma Steam \footnote{É uma plataforma digital de jogos para PC, desenvolvida pela Valve Corporation, que permite aos usuários comprar, baixar, jogar e gerenciar seus jogos.}., que facilitou o processo de download e atualização. Em seguida, foi criado um repositório no GitHub, clonado localmente para permitir o início imediato do projeto na raiz do versionamento.
 
 As primeiras configurações incluíram o ajuste da resolução de tela, ativação de ferramentas de \textit{debug} e o mapeamento de entradas no \textit{Input Map} para controlar as ações do jogador. Esses ajustes foram essenciais para garantir um ambiente funcional e preparado para as etapas seguintes. O próprio Godot fornece ferramentas de \textit{debug} como painel de saída (\textit{Output}), breakpoints, o monitor de desempenho em tempo real e a exibição de variáveis no \textit{Inspector}, permitindo acompanhar o uso de memória, FPS, colisões e mensagens personalizadas via comandos \texttt{print}. Esses recursos foram utilizados principalmente para rastrear o comportamento dos objetos em cena, identificar colisões inesperadas e ajustar a lógica dos poderes e do sistema de movimentação durante os testes iniciais.
 
-A organização do trabalho foi orientada pelo uso de metodologias ágeis, conforme descrito no Capítulo~\ref{sec:metodologia}, com foco em sprints quinzenais e no uso contínuo do Trello. Essa abordagem permitiu visualizar metas específicas a cada ciclo, monitorar o progresso e reorganizar prioridades sempre que necessário. Ainda que alguns atrasos tenham ocorrido devido a imprevistos técnicos ou demandas externas, a estrutura do Scrum possibilitou replanejamentos sem comprometer o andamento geral do projeto.
+A organização do trabalho foi orientada pelo uso de Metodologias ágeis, conforme descrito no Capítulo~\ref{sec:metodologia}, com foco em sprints quinzenais e no uso contínuo do Trello. Essa abordagem permitiu visualizar metas específicas a cada ciclo, monitorar o progresso e reorganizar prioridades sempre que necessário. Ainda que alguns atrasos tenham ocorrido devido a imprevistos técnicos ou demandas externas, a estrutura do Scrum possibilitou replanejamentos sem comprometer o andamento geral do projeto.
 
 Em diversos momentos, retornar ao quadro do Trello foi fundamental para reorganizar ideias, como identificar o próximo passo e retomar o ritmo de desenvolvimento. Essa prática ajudou a contornar bloqueios, dúvidas sobre prioridade e fases de menor produtividade, tornando o processo mais fluido e direcionado.
 
@@ -50,23 +48,27 @@ As funcionalidades relacionadas ao jogador e aos \textit{power-ups} foram encaps
 
 Por fim, a persistência de estado, como pontuação e configurações dos jogadores, bem como a música de fundo, são gerenciadas por meio do \textit{autoload} \texttt{GameManager}. Esse script atua como um controlador global, acessível por todas as cenas, facilitando a manutenção de dados entre transições e o gerenciamento de comportamentos que devem persistir durante toda a execução do jogo.
 
+A Figura~\ref{fig:diagrama-arquitetura-arquivos} exemplifica melhor como o projeto foi organizado em pastas. As pastas azuis possuem arquivos de cena e script relativos ao nome da pasta.
+
 \begin{figure}[htbp]
     \centering
-    \caption{Diagrama de arquitetura de arquivos}
+    \caption{Diagrama de pacotes de arquivos}
     \label{fig:diagrama-arquitetura-arquivos}
-    \includegraphics[width=0.7\textwidth]{figuras/diagrama-arquivos.png}
+    \includegraphics[width=0.7\textwidth]{figuras/diagrama_pacotes.png}
     \legend{Fonte: Elaboração própria}
 \end{figure}
 
 \subsection{Interface e usabilidade}
 
-No projeto, a interface e a usabilidade foram estruturadas em três telas principais: o menu inicial, a seleção de jogadores (lobby) e a \texttt{GameScene}. A engine Godot oferece um sistema de construção de interfaces com baixa dependência de código (\textit{low-code}), permitindo o ajuste de tamanhos, textos e posicionamento de \texttt{Containers} diretamente no editor 2D. A integração desses nós a scripts possibilita a conexão de sinais e a atribuição de métodos aos componentes interativos, proporcionando controle total sobre o comportamento da interface.
+No projeto, a interface e a usabilidade foram estruturadas em três telas principais: o menu inicial, a seleção de jogadores (lobby) e a \texttt{GameScene}. A Engine Godot oferece um sistema de construção de interfaces com baixa dependência de código (\textit{low-code}), permitindo o ajuste de tamanhos, textos e posicionamento de \texttt{Containers} diretamente no editor 2D. A integração desses nós a scripts possibilita a conexão de sinais e a atribuição de métodos aos componentes interativos, proporcionando controle total sobre o comportamento da interface.
+
+Na Figura~\ref{fig:conexao-nos}, exemplifica como referenciar os nós (\textit{nodes}) dentro do script. é comum usarmos o termo "@onready" seguido da variável que vai armazenar o nó para acessar e alterar suas propriedades antes e depois da cena carregar.
 
 \begin{figure}[htbp]
     \centering
     \caption{Conexão de nós com scripts no editor Godot.}
     \label{fig:conexao-nos}
-    \includegraphics[width=0.7\textwidth]{figuras/conexoes-nos.png}
+    \includegraphics[width=1\textwidth]{figuras/conexoes-nos.png}
     \legend{Fonte: Elaboração própria}
 \end{figure}
 
@@ -78,11 +80,13 @@ Além disso, sons foram adicionados para reforçar a imersão do jogador e dar f
 
 \subsection{Implementação das mecânicas do jogo}
 
-O desenvolvimento foi feito em GDScript, a linguagem nativa da Godot. Ela é baseada em Python e é fortemente integrada à arquitetura da engine. Três métodos se destacam na construção da lógica do jogo: \texttt{ready}, chamado uma vez assim que o nó entra na árvore de cena; \texttt{physics\_process(delta)}, executado a cada frame de física e utilizado para atualizar elementos em tempo real; e a anotação \texttt{@onready}, que permite inicializar variáveis com nós da cena somente após estarem carregados. Esses recursos estruturam o ciclo de vida dos objetos e organizam a execução do jogo em etapas previsíveis. Além disso, a engine Godot adota uma estrutura orientada a nós, onde tudo é tratado como um objeto independente na hierarquia da cena. Qualquer referência a esse objeto, quando alterada, reflete automaticamente em todas as partes do código onde ele está instanciado ou referenciado, o que facilita a reutilização, modularização e manutenção do projeto.
+O desenvolvimento foi feito em GDScript, a linguagem nativa da Godot. Ela é baseada em Python e é fortemente integrada à arquitetura da Engine. Três métodos se destacam na construção da lógica do jogo: \texttt{ready}, chamado uma vez assim que o nó entra na árvore de cena; \texttt{physics\_process(delta)}, executado a cada frame de física e utilizado para atualizar elementos em tempo real; e a anotação \texttt{@onready}, que permite inicializar variáveis com nós da cena somente após estarem carregados. Esses recursos estruturam o ciclo de vida dos objetos e organizam a execução do jogo em etapas previsíveis. Além disso, a Engine Godot adota uma estrutura orientada a nós, onde tudo é tratado como um objeto independente na hierarquia da cena. Qualquer referência a esse objeto, quando alterada, reflete automaticamente em todas as partes do código onde ele está instanciado ou referenciado, o que facilita a reutilização, modularização e manutenção do projeto.
 
 O \texttt{ready} carrega a cena inicial. Define as dimensões do mapa e chamado a função de \texttt{start\_round} que dá início ao jogo.
 
 A função \texttt{start\_round} é chamada no início de cada rodada e tem como responsabilidade configurar o estado inicial do jogo. Nela são instanciados os jogadores, com base em uma cena pré-configurada (\texttt{PackedScene}), posicionados nos marcadores definidos no mapa e conectados aos seus respectivos sinais. Além disso, o método define o tempo para início da rodada, ativando um contador regressivo e liberando o movimento dos jogadores apenas após sua conclusão. Esse controle inicial garante que todas as partidas comecem de forma sincronizada e clara para os participantes.
+
+A Figura~\ref{fig:round_start} mostra como os jogadores são instanciados na cena do jogo. Primeiro instânciamos o jogador, alinhamos todos na mesma camada, definimos sua posição incial e ajustamos os sinais de suas funções.
 
 \begin{figure}[htbp]
     \centering
@@ -93,6 +97,8 @@ A função \texttt{start\_round} é chamada no início de cada rodada e tem como
 \end{figure}
 
 Durante a execução do jogo, a função \texttt{physics\_process(delta)} é responsável por atualizar o tempo, movimentar os jogadores e controlar os poderes. Cada jogador move-se em linha reta com velocidade constante, ajustando sua rotação com base nas entradas recebidas. A cada ciclo de atualização, o jogo verifica se é hora de instanciar um novo rastro atrás do jogador, formando a trilha que delimita o espaço percorrido. Também é nesse método que o cronômetro de geração de poderes é verificado, e, ao atingir o tempo definido, um novo poder é instanciado em posição aleatória no mapa.
+
+Naa Figuras~\ref{fig:player_pp} e ~\ref{fig:gamascene_pp} tem exemplos da função nativa do Godot \textit{\_physics\_process} preentes no jogadores e no mapa do jogo. Nessa função é colocado tudo que for verificado ou processado pelos \textit{game ticks}, ou seja, a cada frame do jogo como detecção da momvimentação e colisões.
 
 \begin{figure}[htbp]
     \centering
@@ -112,6 +118,8 @@ Durante a execução do jogo, a função \texttt{physics\_process(delta)} é res
 
 A detecção de colisões foi feita por meio do nó \texttt{Area2D} com \texttt{CollisionShape2D}, presente tanto nos jogadores quanto nos rastros e paredes. Cada jogador possui um sinal \texttt{area\_entered} conectado diretamente à cena \texttt{GameScene}, utilizando \texttt{Callable(self, "\_on\_player\_died")}. Ao detectar uma colisão com uma área pertencente a outro jogador, a função de morte é acionada, removendo o jogador da cena e atualizando o ranking da rodada. A função \texttt{end\_round}, chamada após restar apenas um jogador vivo, é responsável por pausar o jogo, distribuir os pontos com base na ordem de eliminação, verificar se algum jogador alcançou a pontuação de vitória e, caso não haja vencedor, iniciar uma nova rodada com \texttt{start\_round}.
 
+Nas Figuras~\ref{fig:on_player_died} e \ref{fig:player_area_func} são exemplos das funções responsáveis por detectar a morte e a colisão do jogador. Para detectar a morte de um jogador, a função \textit{\_on\_player\_died} identifica quem morreu usando uma função de \textit{callback} ligado ao sinal de colisão do jogador e a colisão é identificar verificando o grupo ao qual o objeto colidido pertence, seja rastro ou parede.
+
 \begin{figure}[htbp]
     \centering
     \caption{gamescene: \_on\_player\_died}
@@ -130,15 +138,17 @@ A detecção de colisões foi feita por meio do nó \texttt{Area2D} com \texttt{
 
 Para o áudio, foi adotada uma abordagem simples e funcional. A música de fundo é gerenciada por um nó \texttt{AudioStreamPlayer}, carregado por meio de um script no \texttt{AutoLoad}, o que permite sua reprodução contínua em loop durante todo o jogo, independentemente da cena ativa. Já os efeitos sonoros, como o som de morte, foram incorporados diretamente à cena de cada jogador, utilizando o nó \texttt{AudioStreamPlayer2D}. Essa escolha permite que cada instância de jogador reproduza seus próprios sons de forma independente, garantindo uma espacialização adequada e mantendo o controle de áudio encapsulado no próprio objeto responsável pela ação.
 
-Abaixo tem o a fluxo lógico simplificado que ocorre na cena de jogo.
+Abaixo tem a Figura~\ref{fig:bpmn} do fluxo lógico simplificado que ocorre na cena de jogo.
 
 \begin{figure}[htbp]
     \centering
     \caption{BPMN: fluxo lógico}
     \label{fig:bpmn}
-    \includegraphics[width=0.7\textwidth]{figuras/BPMN_tcc.png}
+    \includegraphics[width=1\textwidth]{figuras/BPMN_tcc.png}
     \legend{Fonte: Elaboração própria}
 \end{figure}
+
+A Tabela~\ref{tab:implementacao-funcionalidades} contem o resumo das principais soluções de implementação das funcionalidades do jogo.
 
 \begin{table}[H]
 \centering
@@ -170,7 +180,7 @@ Tamanho do mapa & Dois \texttt{Marker2D} e quatro \texttt{Walls} (Area2D) & Os m
 
 O fluxo de telas do jogo consiste em três cenas: menu principal, lobby e jogo. Abaixo é possível visualizar o resultado final e a sequência de tela do jogo.
 
-A tela inicial possui um \textit{background} com estética semelhante ao jogo, e o usuário pode optar por sair do jogo ou jogar através de um clique.
+A tela inicial possui um \textit{background} com estética semelhante ao jogo, e o usuário pode optar por sair do jogo ou jogar através de um clique. As próximas Figuras \ref{fig:menu-inical}, \ref{fig:menu-lobby}, \ref{fig:in-game} e \ref{fig:pause-game}, mostra telas do jogo desde o menu até a tela em jogo.
 
 \begin{figure}[htbp]
     \centering
@@ -222,7 +232,7 @@ Quando um jogador alcança a pontuação mínima, o jogo encerra declarando o ve
 
 \subsection{Principais desafios e soluções}
 
-Durante o desenvolvimento do jogo, diversos desafios técnicos e conceituais surgiram, especialmente por se tratar da primeira experiência prática com uma engine de jogos. O primeiro obstáculo foi compreender o funcionamento da Godot Engine e explorar suas funcionalidades. Para isso, foi essencial adotar uma abordagem de aprendizagem baseada em experimentação contínua, consulta à documentação oficial, fóruns, vídeos e o uso de inteligência artificial para suporte na resolução de problemas. A própria engine facilita esse processo ao oferecer uma documentação embutida que permite explorar métodos e propriedades diretamente nos nós utilizados.
+Durante o desenvolvimento do jogo, diversos desafios técnicos e conceituais surgiram, especialmente por se tratar da primeira experiência prática com uma Engine de jogos. O primeiro obstáculo foi compreender o funcionamento da Godot Engine e explorar suas funcionalidades. Para isso, foi essencial adotar uma abordagem de aprendizagem baseada em experimentação contínua, consulta à documentação oficial, fóruns, vídeos e o uso de inteligência artificial para suporte na resolução de problemas. A própria Engine facilita esse processo ao oferecer uma documentação embutida que permite explorar métodos e propriedades diretamente nos nós utilizados.
 
 Um segundo desafio relevante foi a construção da interface. A tentativa de criar telas responsivas exigiu o entendimento aprofundado sobre propriedades como ancoragem, margens, alinhamentos e retângulos (\texttt{Rect}). Além disso, foi necessário aprender a combinar diferentes tipos de \texttt{Container} para estruturar layouts adaptáveis, utilizando ferramentas como \texttt{HBoxContainer}, \texttt{VBoxContainer} e \texttt{MarginContainer}.
 
@@ -234,7 +244,7 @@ Outro problema significativo ainda relacionado ao rastro foi a colisão imediata
 
 Após a implementação de todos os poderes, aqueles que alteravam o tamanho dos jogadores ainda apresentavam comportamentos inconsistentes, sem uma solução satisfatória no momento. Diante disso, optou-se por remover temporariamente esses poderes do jogo, até que uma abordagem mais estável e compatível com o restante da lógica fosse encontrada.
 
-Ao longo do desenvolvimento, diversos outros problemas surgiram, de escala menor ou semelhante, mas ainda assim relevantes para o processo de aprendizagem. Alguns foram resolvidos rapidamente, enquanto outros exigiram maior abstração e análise do comportamento da engine. Entre os exemplos recorrentes estavam situações como instanciar objetos como filhos de outros e perceber que isso altera sua \texttt{global\_position}, ou tentar interagir com nós que já haviam sido removidos. Com o tempo, esses padrões de erro se tornam mais reconhecíveis, e a experiência adquirida passa a desempenhar um papel fundamental na antecipação de problemas e na escolha de soluções mais eficientes. Esses aprendizados acumulados, ainda que muitas vezes não documentados diretamente, contribuem significativamente para a formação prática do desenvolvedor.
+Ao longo do desenvolvimento, diversos outros problemas surgiram, de escala menor ou semelhante, mas ainda assim relevantes para o processo de aprendizagem. Alguns foram resolvidos rapidamente, enquanto outros exigiram maior abstração e análise do comportamento da Engine. Entre os exemplos recorrentes estavam situações como instanciar objetos como filhos de outros e perceber que isso altera sua \texttt{global\_position}, ou tentar interagir com nós que já haviam sido removidos. Com o tempo, esses padrões de erro se tornam mais reconhecíveis, e a experiência adquirida passa a desempenhar um papel fundamental na antecipação de problemas e na escolha de soluções mais eficientes. Esses aprendizados acumulados, ainda que muitas vezes não documentados diretamente, contribuem significativamente para a formação prática do desenvolvedor.
 
 \subsection{Testes de Funcionalidade e Desempenho}
 
@@ -243,6 +253,8 @@ Os testes realizados no projeto seguiram uma abordagem prática e limitada, cons
 Os testes foram realizados pelo próprio autor, de forma exploratória, em um ambiente local, utilizando um computador pessoal com sistema Windows 11, AMD Ryzen 5 3600 6-Core Processor, 16 GB memória RAM, placa de vídeo AMD Radeon RX 5600 XT.
 
 Durante o processo de testes, foram identificados bugs e comportamentos inesperados, como colisões incorretas, travamentos de movimentos ou falhas em efeitos visuais. Esses problemas eram registrados na plataforma Trello, dentro da seção de tarefas “Melhorias”, para posterior análise e correção. Esse processo, ainda que informal, foi essencial para garantir a estabilidade mínima do sistema e evitar que erros simples passassem despercebidos até a entrega final.
+
+A Figura~\ref{fig:polimento-e-ajustes} mostra o quadro de bugs encontrados, para poder haver rastreamento e identificação de bugs e comportamento inesperados do jogo.
 
 \begin{figure}[htbp]
     \centering

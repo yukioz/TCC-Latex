@@ -1,6 +1,4 @@
 \chapter[Especificação do jogo]{Especificação do jogo}
-\addcontentsline{toc}{chapter}{Especificação do jogo}
-\markboth{Especificação do jogo}{Especificação do jogo}
 
 Neste capítulo, apresentamos os conceitos gerais do jogo produzido, desde o objetivo, narrativa, regras, mecânicas e funcionalidades. A especificação do jogo é um documento essencial para definir de maneira clara e detalhada todos os aspectos que compõem a experiência do jogador, servindo como guia tanto para a equipe de desenvolvimento quanto para possíveis ajustes e melhorias no decorrer do projeto. A partir desta especificação, é possível alinhar as expectativas e assegurar que o produto final atenda aos requisitos propostos, oferecendo uma base sólida para a implementação e testes do jogo.
 
@@ -12,15 +10,15 @@ Outra inspiração relevante é o jogo de navegador “Curve Fever”, cuja prop
 
 \begin{figure}[htbp]
     \centering
-    \caption{Jogo achtung die kurve}
+    \caption{Jogo Achtung Die Kurve}
     \label{fig:achtung-kurve}
     \includegraphics[width=0.7\textwidth]{figuras/kuver-fever.png}
-    \legend{Fonte: Thumb video (Let 's Play ACHTUNG DIE KURVE!  Gameplay. Voltorn Elda)}
+    \legend{Fonte: https://www.youtube.com/watch?v=FHyALtYMfPY}
 \end{figure}
 
 A narrativa do jogo é relativamente simples. Até 6 jogadores podem ingressar numa sala virtual, onde cada um controla um dos 6 animais disponíveis. Cada animal é representado por uma cor específica: porco (rosa), dragão (vermelho), serpente (verde), baleia (azul), lobo (branco) e águia (amarelo).
 
-Os jogadores competem em várias rodadas e acumulam pontos de acordo com sua colocação. O número de pontos necessários para o fim da partida é definido pela fórmula:
+Os jogadores competem em várias rodadas e acumulam pontos de acordo com sua colocação. O número de pontos necessários para o fim da partida é definido pela equação:
 
 \begin{center}
     \textbf{Pontuação para vitória = número de jogadores $\times$ 5}
@@ -75,35 +73,37 @@ Para uma descrição visual dos poderes, consulte o \textbf{Apêndice 2}.
 
 \section{Mecânicas e Jogabilidade}
 
-A mecânica do jogo é simples: o jogador pode mover-se para a esquerda ou para a direita. No entanto, a movimentação dos personagens é limitada a curvas com raio pré-determinado. A velocidade do jogador influencia diretamente o tamanho da curva: quanto maior a velocidade, maior será o raio da curva.
+A mecânica do jogo: o jogador pode mover-se para a esquerda ou para a direita. No entanto, a movimentação dos personagens é limitada a curvas com raio pré-determinado. A velocidade do jogador influencia diretamente o tamanho da curva: quanto maior a velocidade, maior será o raio da curva.
 
 \section{Gamificação e Análise Crítica}
 
-A escolha desse tipo de jogo envolveu diversos fatores, como a facilidade de criação de \textit{assets} (arte do jogo), o desenvolvimento simples de roteiros e o curto prazo de tempo. O foco principal deste projeto é utilizá-lo como estudo de caso, visando gerar resultados relevantes para a pesquisa.
+A escolha desse tipo de jogo envolveu diversos fatores, como a facilidade de criação de \textit{assets} (arte do jogo) e desenvolvimento curto devido ao prazo de tempo. Reforçando a ideia deste projeto ser utilizá-lo como estudo de caso, visando gerar resultados relevantes para a pesquisa.
 
-Apesar da mecânica ser simples, o jogo conta com diversas funcionalidades, como poderes especiais e regras que o tornam dinâmico e interessante.
+Apesar da mecânica simplificada, o jogo conta com diversas funcionalidades, como poderes especiais e regras que o tornam dinâmico e interessante.
 
-Além disso, o jogo foi analisado com base no \textit{framework} Octalysis, desenvolvido pelo designer Yu-kai Chou, com o objetivo de avaliar o engajamento dos jogadores. Embora o Octalysis seja um \textit{framework} voltado para a gamificação, ele também pode ser aplicado à análise de jogos, pois oferece uma compreensão profunda das motivações que mantêm os jogadores envolvidos e da efetividade do \textit{game design}.
+Para a avaliação do engajamento, utilizou-se o \textit{framework} Octalysis, desenvolvido por Yu-kai Chou, originalmente voltado para gamificação de atividades e comportamentos. Embora seu uso mais comum esteja relacionado a sistemas gamificados em contextos educacionais e corporativos, o Octalysis também é aplicável ao \textit{game design} digital, pois fornece uma compreensão aprofundada das motivações que mantêm os jogadores envolvidos. Ele já foi utilizado em pesquisas de experiência do usuário (UX) em jogos digitais para identificar pontos de engajamento e orientar melhorias no design, como no caso documentado de \textit{Candy Crush} \cite{gamedeveloper2021octalysis}.
 
-O Octalysis é composto por oito \textit{cores} (motivações), que são elementos-chave para o engajamento. Na análise, selecionamos os principais \textit{cores} presentes no jogo e os avaliamos em uma escala de 1 a 5, onde 1 indica pouco explorado e 5 indica muito explorado \cite{octalysis}.
+O framework é composto por oito \textit{cores} (impulsionadores motivacionais). Cada um representa um aspecto-chave da motivação humana que pode ser explorado em um jogo. Nesta análise, selecionamos os principais \textit{cores} presentes no protótipo e os avaliamos com base na percepção de três testadores, incluindo o autor, em uma escala de 1 a 5, onde 1 indica presença pouco explorada e 5 indica presença fortemente explorada \cite{octalysis}.
+
+O número reduzido de participantes se deveu a limitações de tempo e disponibilidade durante a etapa de testes. Ainda que a amostra pequena limite a generalização dos resultados, ela foi suficiente para apontar ajustes iniciais nas mecânicas e confirmar elementos que contribuíram para o engajamento. O formulário de avaliação completo e os resultados estão disponíveis no Anexo~\ref{anexo:formulario}.
 
 \subsection*{Principais \textit{cores} utilizados}
 
 \textbf{Epic Meaning}
 \textit{Resumo}: Este \textit{core} refere-se ao senso de propósito maior ou missão.
-\textit{Uso}: 2 — Embora a narrativa envolva os animais na floresta, ela não é muito explorada e serve principalmente para criar um ambiente visual, sem grande impacto no engajamento do jogador.
+\textit{Uso}: 1 — Embora a narrativa tente envolver os animais na floresta, ela não é muito explorada e ficou desconexa do tema Tron. Os jogadores não ficaram interessados infelizmente e acabou sendo uma prospota que aos poucos foi perdendo prioridade.
 
 \vspace{0.5em}
 \textbf{Social Influence \& Relatedness}
 \textit{Resumo}: Relacionado à interação social e senso de comunidade.
-\textit{Uso}: 4 — Como o jogo é competitivo, a interação entre os jogadores é um ponto-chave. A disputa aumenta o engajamento e a imersão, estimulando o sentimento de conexão e rivalidade.
+\textit{Uso}: 4 — Como o jogo é competitivo, a interação entre os jogadores é um ponto-chave. A disputa aumenta o engajamento e a imersão, estimulando o sentimento de conexão e rivalidade. Houve problemas em alocar muitas pessoas em um único teclado, mas foi uma bagunça divertida que reuniu amigos e situações engraçadas.
 
 \vspace{0.5em}
 \textbf{Unpredictability \& Curiosity}
 \textit{Resumo}: Este \textit{core} envolve a curiosidade e o desejo de explorar.
-\textit{Uso}: 3 — A presença de poderes aleatórios e a variabilidade no comportamento dos jogadores tornam o jogo imprevisível, mantendo o jogador curioso sobre os resultados de cada partida.
+\textit{Uso}: 4 — A presença de poderes aleatórios e a variabilidade no comportamento dos jogadores tornam o jogo imprevisível, mantendo o jogador curioso sobre os resultados de cada partida.
 
 \vspace{0.5em}
 \textbf{Loss \& Avoidance}
 \textit{Resumo}: Refere-se ao medo de perder e à motivação para evitar consequências negativas.
-\textit{Uso}: 2 — Embora o jogo seja competitivo, a perda não é tratada como uma consequência punitiva. A penalização ocorre principalmente na pontuação, com perdas menores nas rodadas, o que suaviza o impacto da derrota e foca mais no progresso do jogador.
+\textit{Uso}: 3 — Embora o jogo seja competitivo, a perda não é tratada como uma consequência punitiva. A penalização ocorre principalmente na pontuação, com perdas menores nas rodadas, o que suaviza o impacto da derrota, mas ainda causa irritação nos jogadores.
